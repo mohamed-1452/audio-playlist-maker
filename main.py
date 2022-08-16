@@ -2,7 +2,7 @@ from moviepy.audio.fx.audio_fadeout import audio_fadeout
 from moviepy.audio.fx.audio_fadein import audio_fadein
 from moviepy.editor import AudioFileClip, CompositeAudioClip
 
-from query import *
+from helpers import *
 
 
 def make_playlist(

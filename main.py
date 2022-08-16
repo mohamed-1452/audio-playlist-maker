@@ -41,8 +41,6 @@ def make_playlist(
 
 
 def main():
-    # update readme.md
-    # upload on github
     grouped_audio_clips = ask(
         'input(s) directory: ',
         validators=[is_dir, is_supported_audio_dir],

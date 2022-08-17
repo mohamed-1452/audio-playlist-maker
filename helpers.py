@@ -42,7 +42,7 @@ def is_dir(text: str):
 
 def is_supported_audio_dir(text: str):
     message = "input must be a supported audio directory"
-    base_path = text_to_path(text)
+    base_path = text_to_dir_path(text)
 
     if len(glob(base_path+'*.wav')) + len(glob(base_path+'*.mp3')) > 1:
         return (True, message)
@@ -58,7 +58,7 @@ def is_supported_audio_dir(text: str):
 
 
 # Transformers
-def text_to_path(text: str):
+def text_to_dir_path(text: str):
     return normpath(text) + '/'
 
 
@@ -68,7 +68,7 @@ def text_to_int(text: str):
 
 def audio_dir_to_grouped_audio_clips(audio_dir: str):
     groups: List[Tuple[str, List[Tuple[AudioFileClip, str]]]]
-    base_path = text_to_path(audio_dir)
+    base_path = text_to_dir_path(audio_dir)
     is_single_group = len(
         glob(base_path+'*.wav') + glob(base_path+'*.mp3')) > 1
 

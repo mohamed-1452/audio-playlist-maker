@@ -50,7 +50,7 @@ def main():
     output_dir = ask(
         'output directory: ',
         validators=[is_dir],
-        transformer=text_to_path,
+        transformer=text_to_dir_path,
     )
 
     cross_fade_time = ask(
